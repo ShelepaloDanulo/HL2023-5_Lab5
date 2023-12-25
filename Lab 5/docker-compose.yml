@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  spark:
+    build: .
+    environment:
+      - PYSPARK_MAJOR_PYTHON_VERSION=3
+    volumes:
+      - spark_data:/sprk
+
+volumes:
+  spark_data:
+    name: spark_data
